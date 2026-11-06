@@ -156,7 +156,7 @@ export default function App() {
         {/* Grid: Controls & List (Left) vs Interactive Map (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
           {/* Left Column: Vehicle Picker, Range Slider, & Station List */}
-          <div className="lg:col-span-5 space-y-4 order-2 lg:order-1">
+          <div className="lg:col-span-5 space-y-4 order-2 lg:order-1 relative z-20">
             {/* 1. Vehicle Selector */}
             <VehicleSelector
               selectedVehicle={selectedVehicle}

@@ -27,8 +27,8 @@ export default function Header({
             </div>
             <div>
               <div className="flex items-center space-x-2">
-                <span className="text-xl font-bold tracking-tight font-chakra text-white">
-                  Volt<span className={isCritical ? 'text-red-400' : 'text-emerald-400'}>Guard</span>
+                <span className="text-2xl font-bold tracking-tight font-chakra text-white">
+                  Ather
                 </span>
                 <span className="text-[10px] uppercase font-mono-telemetry tracking-widest px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
                   v2.4 Telemetry
