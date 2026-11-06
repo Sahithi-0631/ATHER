@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, .font-chakra {
+    font-family: 'Chakra Petch', sans-serif;
+  }
+
+  .font-mono-telemetry {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar for dark cyber theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Leaflet Container Styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #0b1120 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Dark mode map tiles filter for dark UI */
+.dark-tiles {
+  filter: brightness(0.8) invert(1) contrast(3) hue-rotate(200deg) saturate(0.35);
+}
+
+/* Pulse animation for Reachability Circle */
+@keyframes radar-pulse {
+  0% {
+    stroke-opacity: 0.8;
+    stroke-width: 2px;
+  }
+  50% {
+    stroke-opacity: 0.3;
+    stroke-width: 4px;
+  }
+  100% {
+    stroke-opacity: 0.8;
+    stroke-width: 2px;
+  }
+}
+
+.radar-circle {
+  animation: radar-pulse 2.5s infinite ease-in-out;
+}
+
+.radar-circle-critical {
+  animation: radar-pulse 1s infinite ease-in-out;
+}
+
+/* Custom Leaflet Tooltip & Popup styling */
+.leaflet-popup-content-wrapper {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.6) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+}
+
+.leaflet-popup-close-button {
+  color: #94a3b8 !important;
+  padding: 8px !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: #f1f5f9 !important;
+}
+
