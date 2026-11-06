@@ -5,6 +5,8 @@
 @layer base {
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #070b14;
+    color: #f1f5f9;
   }
 
   h1, h2, h3, .font-chakra {
@@ -16,39 +18,72 @@
   }
 }
 
-/* Custom scrollbar for dark cyber theme */
+/* Glassmorphism & Cockpit UI Utilities */
+.cockpit-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(51, 65, 85, 0.45);
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.6), 0 8px 15px -6px rgba(0, 0, 0, 0.5);
+}
+
+.cockpit-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cockpit-panel-hover:hover {
+  background: rgba(30, 41, 59, 0.7);
+  border-color: rgba(100, 116, 139, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 25px 40px -5px rgba(0, 0, 0, 0.75);
+}
+
+/* Glow Effects */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
+}
+.glow-coral {
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.5);
+}
+.glow-amber {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.35);
+}
+
+/* Custom Cockpit Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: rgba(7, 11, 20, 0.8);
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: rgba(51, 65, 85, 0.8);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+  background: #00f0ff;
 }
 
 /* Leaflet Container Styling */
 .leaflet-container {
   width: 100%;
   height: 100%;
-  background-color: #0b1120 !important;
+  background-color: #070b14 !important;
   font-family: 'Inter', sans-serif !important;
 }
 
-/* Dark mode map tiles filter for dark UI */
-.dark-tiles {
-  filter: brightness(0.8) invert(1) contrast(3) hue-rotate(200deg) saturate(0.35);
+/* High-tech inverted dark tiles for OSM fallback */
+.osm-cockpit-tiles {
+  filter: brightness(0.7) invert(1) contrast(3.2) hue-rotate(200deg) saturate(0.35);
 }
 
-/* Pulse animation for Reachability Circle */
-@keyframes radar-pulse {
+/* Radar pulse animation for Safe Reachability Circle */
+@keyframes cockpit-radar {
   0% {
-    stroke-opacity: 0.8;
+    stroke-opacity: 0.9;
     stroke-width: 2px;
   }
   50% {
@@ -56,45 +91,45 @@
     stroke-width: 4px;
   }
   100% {
-    stroke-opacity: 0.8;
+    stroke-opacity: 0.9;
     stroke-width: 2px;
   }
 }
 
 .radar-circle {
-  animation: radar-pulse 2.5s infinite ease-in-out;
+  animation: cockpit-radar 2.5s infinite ease-in-out;
 }
 
 .radar-circle-critical {
-  animation: radar-pulse 1s infinite ease-in-out;
+  animation: cockpit-radar 1s infinite ease-in-out;
 }
 
 /* Custom Leaflet Tooltip & Popup styling */
 .leaflet-popup-content-wrapper {
-  background: #0f172a !important;
+  background: rgba(15, 23, 42, 0.95) !important;
   color: #f8fafc !important;
-  border: 1px solid #334155 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 240, 255, 0.15) !important;
+  backdrop-filter: blur(16px) !important;
   padding: 0 !important;
 }
 
 .leaflet-popup-content {
-  margin: 12px 14px !important;
+  margin: 14px 16px !important;
   line-height: 1.4 !important;
 }
 
 .leaflet-popup-tip {
-  background: #0f172a !important;
-  border: 1px solid #334155 !important;
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
 }
 
 .leaflet-popup-close-button {
   color: #94a3b8 !important;
-  padding: 8px !important;
+  padding: 8px 10px !important;
 }
 
 .leaflet-popup-close-button:hover {
-  color: #f1f5f9 !important;
+  color: #00f0ff !important;
 }
-

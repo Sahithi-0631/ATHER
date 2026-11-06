@@ -119,7 +119,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0f1d] text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#070b14] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-slate-950">
       {/* Top Application Header */}
       <Header
         selectedVehicle={selectedVehicle}
@@ -204,15 +204,15 @@ export default function App() {
         </div>
 
         {/* Engineering Footnote & Hardware Protocol Transparency */}
-        <footer className="mt-8 pt-4 pb-6 border-t border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <footer className="mt-8 pt-4 pb-6 border-t border-slate-800/80 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center space-x-2">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <ShieldCheck className="w-4 h-4 text-cyan-400" />
             <span>
-              <strong>VoltGuard Protocol Engine:</strong> 2W / 4W Hardware Separation active &bull; BMS 2% Reserve Buffer Protected
+              <strong className="text-slate-200">Ather Cockpit Engine:</strong> 2W / 4W Hardware Separation Active &bull; BMS 2% Reserve Buffer Protected
             </span>
           </div>
           <div className="text-[11px] font-mono-telemetry text-slate-400">
-            Coordinates: NH-44 Toll Corridor (15.8281&deg; N, 78.0373&deg; E)
+            Telemetry Anchor: NH-44 Corridor (15.8281&deg; N, 78.0373&deg; E)
           </div>
         </footer>
       </main>
